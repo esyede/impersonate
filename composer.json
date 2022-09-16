@@ -1,6 +1,6 @@
 {
     "name": "esyede/impersonate",
-    "description": "Paket dimpersonate (login as other user) untuk rakit framework",
+    "description": "Paket impersonate (login as other user) untuk rakit framework",
     "keywords": ["impersonate", "rakit", "framework"],
     "homepage": "https://github.com/esyede/impersonate",
     "type": "library",

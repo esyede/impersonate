@@ -1,6 +1,6 @@
 # impersonate
 
-Paket dimpersonate (login as other user) untuk rakit framework
+Paket impersonate (login as other user) untuk rakit framework
 
 
 ### Instalasi
