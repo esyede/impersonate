@@ -1,0 +1,5 @@
+{
+    "name": "impersonate",
+    "description": "Paket dimpersonate (login as other user) untuk rakit framework",
+    "version": "v1.0.0"
+}
