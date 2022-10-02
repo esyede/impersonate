@@ -8,7 +8,7 @@ Paket impersonate (login as other user) untuk rakit framework
 Jalankan perintah ini via rakit console:
 
 ```sh
-php rakit package:install notyf
+php rakit package:install impersonate
 ```
 
 
