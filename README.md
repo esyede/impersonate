@@ -57,10 +57,14 @@ class Impersonate_Controller extends Base_Controller
         // Proteksi dengan middleware
         $this->middleware('before', ['auth', 'admin_only']);
 
-        if (! Impersonate::leave()) {
+        $leave = Impersonate::leave()
+
+        if (! $leave) {
             return Redirect::back()
                 ->with('error', 'Gagal kembali ke admin');
         }
+
+        // dd($leave);
 
         // Berhasil login kembali sebagai admin
         return Redirect::to('admin/dashboard')
