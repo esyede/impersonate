@@ -35,7 +35,7 @@ class Impersonate_Controller extends Base_Controller
     public function action_impersonate()
     {
         // Proteksi dengan middleware
-        $this->middleware('before', ['auth', 'is_admin']);
+        $this->middleware('before', ['auth', 'admin_only']);
 
         $target_id = 2; // Ubah sesuai kebutuhan
         $impersonated = Impersonate::login($target_id);
@@ -55,18 +55,16 @@ class Impersonate_Controller extends Base_Controller
     public function action_leave()
     {
         // Proteksi dengan middleware
-        $this->middleware('before', ['auth', 'is_admin']);
+        $this->middleware('before', ['auth', 'admin_only']);
 
-        $leave = Impersonate::leave();
-
-        if (! $leave) {
+        if (! Impersonate::leave()) {
             return Redirect::back()
                 ->with('error', 'Gagal kembali ke admin');
         }
 
         // dd($leave);
 
-        // Berhasil login ke user pemilik id '2'
+        // Berhasil login kembali sebagai admin
         return Redirect::to('admin/dashboard')
             ->with('success', 'Anda kembali login sebagai admin');
     }
