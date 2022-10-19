@@ -62,8 +62,6 @@ class Impersonate_Controller extends Base_Controller
                 ->with('error', 'Gagal kembali ke admin');
         }
 
-        // dd($leave);
-
         // Berhasil login kembali sebagai admin
         return Redirect::to('admin/dashboard')
             ->with('success', 'Anda kembali login sebagai admin');
