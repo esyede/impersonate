@@ -57,7 +57,7 @@ class Impersonate_Controller extends Base_Controller
         // Proteksi dengan middleware
         $this->middleware('before', ['auth', 'admin_only']);
 
-        $leave = Impersonate::leave()
+        $leave = Impersonate::leave();
 
         if (! $leave) {
             return Redirect::back()
